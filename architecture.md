@@ -60,8 +60,19 @@
 - ログ・監視：
 - バックアップ・復旧：
 
+## Technical Risks and POC
+
+本実装前に成立性を確認すべき技術的不確実性を記録する。詳細な実行履歴は`development-log.md`、成功条件は`test-plan.md`、実施タスクは`tasks.md`を正とする。
+
+| ID | 技術的不確実性 | 失敗時の影響 | POC要否 | 成功条件・テストID | 結果・採用判断 |
+|---|---|---|---|---|---|
+| [POC-001] | [確認したい技術要素] | [設計変更・MVP変更など] | [要/不要] | [POC-TEST-ID] | [未実施/採用/不採用/条件付き採用] |
+
+POCが必要な要素は、成功または代替方針の確定まで、依存する本実装の前提条件としない。
+
 ## Testing Strategy
 
+- Feasibility / POC：
 - Unit：
 - Integration：
 - API：
