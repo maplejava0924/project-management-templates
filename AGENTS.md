@@ -6,34 +6,38 @@
 
 実装前に関連ドキュメントを確認し、実装後は必要なドキュメント、テスト結果、証拠を更新する。
 
+## Document Layout
+
+`AGENTS.md`はプロジェクトルートに置き、要件・設計・テスト・タスク・実施記録は`docs/`配下にまとめる。ソースコード・設定ファイルは技術構成に応じて配置する。
+
 ## Document Responsibilities
 
 | ドキュメント | 責務 |
 |---|---|
-| [`product.md`](product.md) | 解決する課題、対象ユーザー、プロダクト要件、MVP、Non-goals、将来拡張 |
-| [`design.md`](design.md) | 画面構成、画面遷移、操作、表示、レスポンシブ、UX方針 |
-| [`architecture.md`](architecture.md) | 技術構成、ホスティング、データモデル、API、外部サービス、セキュリティ、運用 |
-| [`test-plan.md`](test-plan.md) | テストケース、受け入れ条件、テストID、期待結果、証拠ルール |
-| [`tasks.md`](tasks.md) | 実装タスク、依存関係、実装順、進捗、完了証拠 |
-| [`development-log.md`](development-log.md) | タスクごとの実施前計画、実施結果、計画との差分、テスト結果、残課題、証拠 |
+| [`docs/product.md`](docs/product.md) | 解決する課題、対象ユーザー、プロダクト要件、MVP、Non-goals、将来拡張 |
+| [`docs/design.md`](docs/design.md) | 画面構成、画面遷移、操作、表示、レスポンシブ、UX方針 |
+| [`docs/architecture.md`](docs/architecture.md) | 技術構成、ホスティング、データモデル、API、外部サービス、セキュリティ、運用 |
+| [`docs/test-plan.md`](docs/test-plan.md) | テストケース、受け入れ条件、テストID、期待結果、証拠ルール |
+| [`docs/tasks.md`](docs/tasks.md) | 実装タスク、依存関係、実装順、進捗、完了証拠 |
+| [`docs/development-log.md`](docs/development-log.md) | タスクごとの実施前計画、実施結果、計画との差分、テスト結果、残課題、証拠 |
 
 ### Recommended Reading Order
 
-1. [`product.md`](product.md)で何を作るかを理解する
-2. [`design.md`](design.md)でどのような体験にするかを理解する
-3. [`architecture.md`](architecture.md)でどのように実装するかを理解する
-4. [`test-plan.md`](test-plan.md)で何を満たせば合格かを確認する
-5. [`tasks.md`](tasks.md)で実装対象と依存関係を確認する
-6. 必要に応じて[`development-log.md`](development-log.md)で過去の実施結果と判断履歴を確認する
+1. [`docs/product.md`](docs/product.md)で何を作るかを理解する
+2. [`docs/design.md`](docs/design.md)でどのような体験にするかを理解する
+3. [`docs/architecture.md`](docs/architecture.md)でどのように実装するかを理解する
+4. [`docs/test-plan.md`](docs/test-plan.md)で何を満たせば合格かを確認する
+5. [`docs/tasks.md`](docs/tasks.md)で実装対象と依存関係を確認する
+6. 必要に応じて[`docs/development-log.md`](docs/development-log.md)で過去の実施結果と判断履歴を確認する
 
 ## Source of Truth Rules
 
-- プロダクトの目的・対象ユーザー・MVP・Non-goalsは`product.md`を正とする
-- 画面・導線・操作・UXは`design.md`を正とする
-- 技術構成・API・データモデル・インフラは`architecture.md`を正とする
-- テストケース・受け入れ条件・期待結果は`test-plan.md`を正とする
-- 実装状況・依存関係・完了証拠は`tasks.md`を正とする
-- タスクの実施履歴・計画との差分・判断履歴は`development-log.md`に記録する。ただし、仕様や進捗のSingle Source of Truthではない
+- プロダクトの目的・対象ユーザー・MVP・Non-goalsは`docs/product.md`を正とする
+- 画面・導線・操作・UXは`docs/design.md`を正とする
+- 技術構成・API・データモデル・インフラは`docs/architecture.md`を正とする
+- テストケース・受け入れ条件・期待結果は`docs/test-plan.md`を正とする
+- 実装状況・依存関係・完了証拠は`docs/tasks.md`を正とする
+- タスクの実施履歴・計画との差分・判断履歴は`docs/development-log.md`に記録する。ただし、仕様や進捗のSingle Source of Truthではない
 - 同じ内容を複数のドキュメントへ詳細に再掲しない
 - 他のドキュメントから参照する場合は、関連するテストIDや対象ファイルを示す
 
@@ -41,12 +45,12 @@
 
 | 変更内容 | 更新先 |
 |---|---|
-| 課題、対象ユーザー、MVP、Non-goals、将来拡張 | `product.md` |
-| 画面、導線、操作、表示、UX | `design.md` |
-| API、DB、認証、外部サービス、ホスティング、セキュリティ | `architecture.md` |
-| テスト条件、期待結果、受け入れ条件 | `test-plan.md` |
-| タスク、依存関係、進捗、完了証拠 | `tasks.md` |
-| 実施前計画、実施結果、計画との差分、判断履歴 | `development-log.md` |
+| 課題、対象ユーザー、MVP、Non-goals、将来拡張 | `docs/product.md` |
+| 画面、導線、操作、表示、UX | `docs/design.md` |
+| API、DB、認証、外部サービス、ホスティング、セキュリティ | `docs/architecture.md` |
+| テスト条件、期待結果、受け入れ条件 | `docs/test-plan.md` |
+| タスク、依存関係、進捗、完了証拠 | `docs/tasks.md` |
+| 実施前計画、実施結果、計画との差分、判断履歴 | `docs/development-log.md` |
 
 複数の領域に影響する変更では、影響するすべてのドキュメントを更新する。仕様変更を実装だけで完結させない。
 
@@ -190,11 +194,11 @@
 
 POCが必要な場合は、本実装より前に次を行う。
 
-1. `architecture.md`に技術的不確実性、失敗時の影響、POC要否を記載する
-2. `test-plan.md`にPOCの成功条件をテストID付きで定義する
-3. `tasks.md`にPOCタスクを作成し、依存する本実装タスクより先に配置する
-4. POCを実施し、結果と採用判断を`development-log.md`へ記録する
-5. 必要に応じて`architecture.md`、`design.md`、`tasks.md`、`test-plan.md`を更新する
+1. `docs/architecture.md`に技術的不確実性、失敗時の影響、POC要否を記載する
+2. `docs/test-plan.md`にPOCの成功条件をテストID付きで定義する
+3. `docs/tasks.md`にPOCタスクを作成し、依存する本実装タスクより先に配置する
+4. POCを実施し、結果と採用判断を`docs/development-log.md`へ記録する
+5. 必要に応じて`docs/architecture.md`、`docs/design.md`、`docs/tasks.md`、`docs/test-plan.md`を更新する
 
 POCが必要と判断された要素については、POCが成功するか、代替方針が確定するまで、依存する本実装タスクを開始しない。
 
@@ -209,27 +213,27 @@ POCが必要と判断された要素については、POCが成功するか、�
 
 ### Before Implementation
 
-1. `tasks.md`で対象タスクと依存タスクを確認する
-2. `product.md`、`design.md`、`architecture.md`の関連箇所を確認する
-3. `test-plan.md`で対応するテストIDを確認する
+1. `docs/tasks.md`で対象タスクと依存タスクを確認する
+2. `docs/product.md`、`docs/design.md`、`docs/architecture.md`の関連箇所を確認する
+3. `docs/test-plan.md`で対応するテストIDを確認する
 4. 必要なPOCが完了しているか、または代替方針が確定しているか確認する
-5. `development-log.md`へ実施前計画を記録する
+5. `docs/development-log.md`へ実施前計画を記録する
 6. 仕様の矛盾や未決定事項があれば実装を停止し、承認を得る
 
 ### During Implementation
 
 - 明示されていない機能をMVPへ追加しない
-- APIやデータモデルを変更した場合は`architecture.md`を更新する
-- UIや導線を変更した場合は`design.md`を更新する
-- 新しい受け入れ条件が必要になった場合は、まず`test-plan.md`へ追加する
-- 合意済み範囲内のタスク分割・順序調整は自律的に行い、`tasks.md`を更新する。MVP・受け入れ条件・重要な依存関係を変更する場合は事前承認を得る
+- APIやデータモデルを変更した場合は`docs/architecture.md`を更新する
+- UIや導線を変更した場合は`docs/design.md`を更新する
+- 新しい受け入れ条件が必要になった場合は、まず`docs/test-plan.md`へ追加する
+- 合意済み範囲内のタスク分割・順序調整は自律的に行い、`docs/tasks.md`を更新する。MVP・受け入れ条件・重要な依存関係を変更する場合は事前承認を得る
 
 ### After Implementation
 
 1. 対応するテストIDを実行または手動確認する
-2. `test-plan.md`の期待結果を満たした証拠を記録する
-3. `tasks.md`の状態と証拠を更新する
-4. `development-log.md`に実施内容、テスト結果、計画との差分、残課題、証拠を記録する
+2. `docs/test-plan.md`の期待結果を満たした証拠を記録する
+3. `docs/tasks.md`の状態と証拠を更新する
+4. `docs/development-log.md`に実施内容、テスト結果、計画との差分、残課題、証拠を記録する
 5. 仕様と実装の間に矛盾がないか確認する
 
 ## Task Status and User Handoff
@@ -249,23 +253,23 @@ POCが必要と判断された要素については、POCが成功するか、�
 
 ## Test, Task, and Evidence Conventions
 
-- テストIDは`test-plan.md`で定義し、他のドキュメントでは参照する
+- テストIDは`docs/test-plan.md`で定義し、他のドキュメントでは参照する
 - タスクの完了条件には、可能な限り対応するテストIDを記載する
-- テストの詳細を`tasks.md`や`design.md`へ複製しない
+- テストの詳細を`docs/tasks.md`や`docs/design.md`へ複製しない
 - テストに失敗した場合は、完了やユーザー確認待ちにせず、原因と再試行条件を記録する
 - コードが存在するだけでは完了とせず、動作確認・テスト・必要なデプロイ確認を行う
 - 証拠には、実行したテスト、結果、確認日時、URL・ログ・スクリーンショットなどを含める
 
 ## Deferred Work Tracking
 
-「あとで対応」「公開前に対応」「将来検討」と判断した事項は、会話だけで済ませず`tasks.md`へ記録する。目的、実施時期またはマイルストーン、依存関係、完了条件、必要なテストIDを明記する。
+「あとで対応」「公開前に対応」「将来検討」と判断した事項は、会話だけで済ませず`docs/tasks.md`へ記録する。目的、実施時期またはマイルストーン、依存関係、完了条件、必要なテストIDを明記する。
 
 ## Template Initialization
 
-1. このディレクトリの7ファイルを対象プロジェクトのルートへコピーする
-2. `[プロジェクト名]`、`[タスクID]`、`[対象サービス]`などのプレースホルダーを置き換える
+1. `AGENTS.md`を対象プロジェクトのルートに、その他の6ファイルを`docs/`ディレクトリにコピーする
+2. `AGENTS.md`はプロジェクトルートに維持する（Codexが自動的に参照できるようにする）。`docs/`の配置と相対リンクを確認し、`[プロジェクト名]`、`[タスクID]`、`[対象サービス]`などのプレースホルダーを置き換える
 3. プロジェクト固有のMVPガードレール、状態、テストID接頭辞、環境情報を追加する
-4. `product.md`から順に、主要UX・アーキテクチャを含む設計論点を可能な限り洗い出す
+4. `docs/product.md`から順に、主要UX・アーキテクチャを含む設計論点を可能な限り洗い出す
 5. 技術的不確実性と必要なPOC、ユーザーによる外部設定を洗い出す
 6. 初期タスクと初期テストを作成し、重要な設計判断をまとめて承認する
 7. 必要なPOCを完了して設計方針を確定し、依存する本実装を開始する
